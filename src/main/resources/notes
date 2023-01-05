@@ -1,0 +1,8 @@
+-- Pros
+Adding a new property is easy...
+
+
+
+-- dont forget:
+String... on MultiValueProp
+disable DuplicateException just for demo.
