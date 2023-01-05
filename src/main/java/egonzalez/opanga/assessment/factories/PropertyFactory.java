@@ -9,6 +9,7 @@ import egonzalez.opanga.assessment.models.properties.KeyValueProperty;
 import egonzalez.opanga.assessment.models.properties.MultiValueProperty;
 import egonzalez.opanga.assessment.models.properties.PortProperty;
 import egonzalez.opanga.assessment.utils.GeneralUtils;
+import egonzalez.opanga.assessment.utils.ValidationUtils;
 
 import java.util.Arrays;
 
@@ -16,6 +17,7 @@ public class PropertyFactory {
 
     public static Property<?> create(String[] data) {
         TypeEnum type = getType(data);
+        ValidationUtils.validatePropertyName(data[0]);
         switch (type) {
             case Port:
                 Integer[] integers = GeneralUtils.str2int(Arrays.copyOfRange(data, 1, data.length));

@@ -1,7 +1,5 @@
 package egonzalez.opanga.assessment.i18n;
 
-import java.util.Locale;
-
 public abstract class AbstractErrorMessages {
     public String BRACES_ERROR = "Error with braces";
     public String SYNTAX_ERROR = "Syntax error";
@@ -12,6 +10,7 @@ public abstract class AbstractErrorMessages {
     public String FILE_NOT_FOUND = "File not found";
     public String THREAD_ERROR = "Thread interruption";
     public String INVALID_PROPERTY_TYPE = "Type doesn't recognized";
+    public String INVALID_PROPERTY_NAME = "Invalid property name";
 
     // Template
     public String TEMPLATE_DUPLICATED_PROPERTY = "%s property is duplicated";

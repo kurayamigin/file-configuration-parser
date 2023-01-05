@@ -8,7 +8,7 @@ public class KeyValueProperty extends Property<String> {
 
     public KeyValueProperty(String name, String value) {
         super(name, value);
-        key = name;
+        this.key = name;
         this.value = value;
     }
 }

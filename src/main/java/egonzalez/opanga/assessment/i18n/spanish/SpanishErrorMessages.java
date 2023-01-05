@@ -22,6 +22,7 @@ public class SpanishErrorMessages extends AbstractErrorMessages {
         super.FILE_NOT_FOUND = "Archivo no encontrado";
         super.THREAD_ERROR = "Error con los hilos de ejecución";
         super.INVALID_PROPERTY_TYPE = "Tipo de propiedad inválido";
+        super.INVALID_PROPERTY_NAME = "El nombre de la propiedad es inválido";
 
         super.TEMPLATE_DUPLICATED_PROPERTY = "La propiedad %s se encuentra duplicada";
         super.TEMPLATE_HEADER_NOT_MATCH = "La cabecera %s no concuerda con el token de cabecera '%s'.";

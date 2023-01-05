@@ -13,7 +13,6 @@ import egonzalez.opanga.assessment.utils.ValidationUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.function.Predicate;
 
 public class FileConfigurationParser implements IConfigurationParser {
     protected String headerToken = "Runtime";
@@ -57,7 +56,7 @@ public class FileConfigurationParser implements IConfigurationParser {
     protected void fillContentProperties(Section section, List<String> propertyLines) {
         propertyLines.forEach(line -> {
             Property<?> property = PropertyUtils.getProperty(line);
-            //ValidationUtils.validateDuplicatedProperty(property, section.getContent().getProperties());
+            ValidationUtils.validateDuplicatedProperty(property, section.getContent().getProperties());
             section.getContent().getProperties().add(property);
         });
     }
@@ -67,7 +66,7 @@ public class FileConfigurationParser implements IConfigurationParser {
     protected void fillContentSubsections(Section section, List<String> sectionsLines) {
         sectionsLines.forEach(line -> {
             Section subsection = parseSection(new Scanner(line));
-            //ValidationUtils.validateDuplicatedSection(subsection.getName(), section.getContent().getSubsections());
+            ValidationUtils.validateDuplicatedSection(subsection.getName(), section.getContent().getSubsections());
             section.getContent().getSubsections().put(subsection.getName(), subsection);
         });
     }

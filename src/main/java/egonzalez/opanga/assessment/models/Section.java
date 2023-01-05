@@ -1,7 +1,5 @@
 package egonzalez.opanga.assessment.models;
 
-import java.util.*;
-
 public class Section {
     private String name;
     private Content content = new Content();

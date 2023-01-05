@@ -1,5 +1,7 @@
 package egonzalez.opanga.assessment.utils;
 
+import egonzalez.opanga.assessment.errors.AbstractSyntaxException;
+import egonzalez.opanga.assessment.errors.InvalidPropertyException;
 import egonzalez.opanga.assessment.errors.PropertyParseException;
 import egonzalez.opanga.assessment.factories.PropertyFactory;
 import egonzalez.opanga.assessment.i18n.MessageProvider;
@@ -12,6 +14,8 @@ public class PropertyUtils {
         String[] data = line.split("\\p{javaWhitespace}+");
         try {
             return PropertyFactory.create(data);
+        } catch (InvalidPropertyException e) {
+            throw e;
         } catch (Exception e) {
             throw new PropertyParseException(MessageProvider.messages.PROPERTY_ERROR + ": " + line);
         }

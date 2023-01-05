@@ -8,7 +8,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class MultiThreadingFileConfigurationParser extends FileConfigurationParser {

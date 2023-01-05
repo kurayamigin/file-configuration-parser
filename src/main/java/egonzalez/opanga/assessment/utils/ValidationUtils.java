@@ -1,9 +1,6 @@
 package egonzalez.opanga.assessment.utils;
 
-import egonzalez.opanga.assessment.errors.BracesException;
-import egonzalez.opanga.assessment.errors.DuplicatePropertyException;
-import egonzalez.opanga.assessment.errors.DuplicateSectionException;
-import egonzalez.opanga.assessment.errors.HeaderException;
+import egonzalez.opanga.assessment.errors.*;
 import egonzalez.opanga.assessment.i18n.MessageProvider;
 import egonzalez.opanga.assessment.models.Property;
 import egonzalez.opanga.assessment.models.Section;
@@ -21,6 +18,10 @@ public class ValidationUtils {
         String[] headers = name.split("\\p{javaWhitespace}+");
         if (headers.length != 1 || headers[0].isEmpty()) throw new HeaderException(MessageProvider.messages.HEADER_SYNTAX_ERROR);
         if (!headers[0].matches(sectionNameRegex)) throw new HeaderException(MessageProvider.messages.INVALID_HEADER_NAME);
+    }
+
+    public static void validatePropertyName(String propertyName) {
+        if (!propertyName.matches(propertyNameRegex)) throw new InvalidPropertyException(MessageProvider.messages.INVALID_PROPERTY_NAME + ": " + propertyName);
     }
 
     public static void validateDuplicatedProperty(Property<?> property, List<Property<?>> properties) {

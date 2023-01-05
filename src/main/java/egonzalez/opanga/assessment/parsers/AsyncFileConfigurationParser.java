@@ -1,8 +1,6 @@
 package egonzalez.opanga.assessment.parsers;
 
-import egonzalez.opanga.assessment.models.Property;
 import egonzalez.opanga.assessment.models.Section;
-import egonzalez.opanga.assessment.utils.PropertyUtils;
 import egonzalez.opanga.assessment.utils.ValidationUtils;
 
 import java.io.File;
@@ -26,7 +24,7 @@ public class AsyncFileConfigurationParser extends FileConfigurationParser {
         });
 
         threads.stream().map(CompletableFuture::join).forEach(s -> {
-            //ValidationUtils.validateDuplicatedSection(s.getName(), section.getContent().getSubsections());
+            ValidationUtils.validateDuplicatedSection(s.getName(), section.getContent().getSubsections());
             section.getContent().getSubsections().put(s.getName(), s);
         });
     }

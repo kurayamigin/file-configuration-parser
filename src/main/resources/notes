@@ -1,6 +1,23 @@
--- Pros
-Adding a new property is easy...
+-- Topics:
+- OOP
+- SOLID
+- Design Patters (Singleton, Factory, Dependency Inversion, Provider, Iterator)
 
+- Async (Threads/Future)
+- Exceptions Handling / Custom Exceptions
+- Creating Generics
+
+- Unit Tests
+- Mocking
+- Parametrized Tests
+- varargs
+- Stacks
+- i18n (internationalization)
+
+- Maven (POM file)
+- Dependencies
+- Plugins
+- creating properties in POM
 
 
 -- dont forget:
