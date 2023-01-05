@@ -26,23 +26,23 @@ is already on the project (./src/main/resources/test/configs/config).
 
 ### Additional notes
 The source code involves the next topics:
-- OOP
-- SOLID
-- Design Patters (Singleton, Factory, Dependency Inversion, Provider, Iterator)
+- OOP.
+- SOLID.
+- Design Patters (Singleton, Factory, Dependency Inversion, Provider, Iterator).
 
-- Async (Threads/Future)
-- Exceptions Handling / Custom Exceptions
-- Creating Generics
+- Async (Multi-threading/Futures).
+- Exceptions Handling / Custom Exceptions.
+- Creating Generics.
 
-- Unit Tests
-- Mocking
-- Parametrized Tests
-- varargs
-- Stacks
-- i18n (internationalization)
-- Enums
+- Unit Tests.
+- Mocking.
+- Parametrized Tests.
+- varargs.
+- Stacks.
+- i18n (internationalization).
+- Enums.
 
-- Maven (POM file)
-- Dependencies
-- Plugins
-- creating properties in POM
+- Maven (POM file).
+- Dependencies.
+- Plugins.
+- creating properties in POM.
